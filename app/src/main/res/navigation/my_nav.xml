@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cepaqui.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/navigationToHistoricalFragment"
+            app:destination="@id/historicalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historicalFragment"
+        android:name="com.example.cepaqui.ui.fragments.HistoricalFragment"
+        android:label="fragment_historical"
+        tools:layout="@layout/fragment_historical" >
+        <action
+            android:id="@+id/navigationToHomeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
